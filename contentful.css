@@ -76,6 +76,10 @@ p, .navbar {
   padding-top: 40px;
 }
 
+div#content {
+  margin-top: 100px;
+}
+
 .product-details {
   padding: 20px;
 }
