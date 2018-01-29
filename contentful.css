@@ -98,13 +98,24 @@ div#content {
   height: 400px;
 }
 
-.card{
+.card {
  background-color: rgba(255, 255, 255, 0.82);
  -webkit-transition: all .3s ease-in-out;
  -moz-transition: all .3s ease-in-out;
  -o-transition: all .3s ease-in-out;
  transition: transform .3s ease-in-out;
  border: none;
+ }
+
+ .card:hover {
+  transform: scale(1.04);
+  border: 1px solid white;
+  box-shadow: 0px 0px 1px 1px white;
+  height: 100%;
+ }
+
+ .jumbotron {
+   border-radius: 0;
  }
 
  .jumbotron-heading, .navbar {
@@ -125,13 +136,6 @@ div#content {
 .lessSpace:hover {
   transform: none;
 }
-
- .card:hover {
-  transform: scale(1.04);
-  border: 1px solid white;
-  box-shadow: 0px 0px 1px 1px white;
-  height: 100%;
- }
 
  .card-img-top {
    max-width: 100%;
@@ -199,4 +203,29 @@ footer {
 footer p {
   height: 20px;
   margin: 0;
+}
+
+@media only screen and (max-device-width: 480px) {
+  h1 {
+    color: #505464 !important;
+    font-family: 'Amatic SC';
+    font-size: 4em;
+    margin-bottom: -10px;
+  }
+ .moreSpace {
+   margin-top: 10px;
+ }
+ div#content {
+   margin-top: 65px;
+ }
+}
+
+@media screen and (min-width:480px) and (max-width:767px){
+   div#content {
+     margin-top: 70px;
+     margin-bottom: 70px;
+   }
+   h1 {
+     font-size: 5em;
+   }
 }

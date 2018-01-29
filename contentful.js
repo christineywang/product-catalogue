@@ -8,7 +8,7 @@ var PRODUCT_CONTENT_TYPE_ID = '2PqfXUJwE8qSYKuM0U6w8M'
 
 
 document.addEventListener("DOMContentLoaded", function(event) {
-    var container = document.getElementById('content');
+    var container = document.getElementById("content");
     contentfulClient.getEntries({
             content_type: PRODUCT_CONTENT_TYPE_ID
         })
