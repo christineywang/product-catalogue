@@ -26,7 +26,6 @@ function renderProducts(products) {
 
 function renderSingleProduct(product) {
     var fields = product.fields
-    console.log(fields)
     return  '<div class="col-md-4 col-sm-6">' +
         '<div class="product-in-list card mb-4 box-shadow">' +
         '<div class="product-image card-img-top">' +
