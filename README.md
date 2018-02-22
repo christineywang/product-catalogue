@@ -2,9 +2,6 @@
 
 :warning: IN PROGRESS
 
-https://christineywang.github.io/product-catalogue/
-
-<br>
 
 As a Support Engineer for [Contentful](https://www.contentful.com/), we frequently get asked these two questions by new users:
 - What is content modeling?
@@ -32,3 +29,54 @@ Let's begin!
  <br>
 
 ## Creating your Contentful space
+When you create a space in Contentful, you can create either an empty space (so you would be building your content model from scratch) or you can create a example space that has a content model (and even some entries) already built out.
+
+Example spaces are a great way for you to get started with our product and further explore content modeling and best practices. In this project, we will be creating an example space.
+
+From the web app, click on the hamburger menu on the upper left > _+ Add space_.
+
+In the _Create a new space_ popup, click on _Create an example space_.
+
+Select the **Product Catalogue** space > _Create space_:
+
+![create-example-space](images/create_space.png)
+
+<br>
+
+After a few seconds, you will have a new space with a predefined content model and a few sample entries. :metal:
+
+<br>
+
+## Getting your space ID and access token
+
+In order to connect your website with Contentful, you will need to [install Contentful](https://github.com/contentful/contentful.js#installation) to your project or include our script tag in the `<head>` element of your `html` document.
+
+For this project, we have already included the script tag in the website code so you don't need to worry about this step.
+
+Contentful also requires users to provide credentials in order to access content in their spaces. You will need to find your space ID and your Delivery API access token.
+
+To get these credentials from the web app, go to _Space settings_ > _API keys_ > _Content delivery / preview tokens_.
+
+Expand the _Example space token 1_ section and you will see your Space ID and Content Delivery API access token.
+
+<br>
+
+## Making your website
+
+Open the `contentful.js` file in your text editor.
+
+Replace the `accessToken` and `space` field values with your credentials:
+
+![create-example-space](images/initialize.png)
+
+<br>
+
+Save your file.
+
+
+
+## Adding new entries to your website
+
+This is a sample product catalogue using Contentful to deliver content.
+
+https://christineywang.github.io/product-catalogue/

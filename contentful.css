@@ -100,10 +100,10 @@ div#content {
 
 .card {
  background-color: rgba(255, 255, 255, 0.82);
- -webkit-transition: all .3s ease-in-out;
- -moz-transition: all .3s ease-in-out;
- -o-transition: all .3s ease-in-out;
- transition: transform .3s ease-in-out;
+ -webkit-transition: all .75s ease-in-out;
+ -moz-transition: all .75s ease-in-out;
+ -o-transition: all .75s ease-in-out;
+ transition: transform .75s ease-in-out;
  border: none;
  }
 

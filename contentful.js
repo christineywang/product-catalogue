@@ -1,3 +1,4 @@
+
 var contentfulClient = contentful.createClient({
     accessToken: 'a5928e816edc7addfa4298669bd534f83b8cd907b920511b7d2f86f0d5b3e270',
     space: '2q1fpqwpgegt'
