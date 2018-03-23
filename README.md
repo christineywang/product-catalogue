@@ -1,86 +1,77 @@
-## Making Your First Contentful Delivery API Call
+### A Day in the Life of a Customer Support Engineer
 
-:warning: IN PROGRESS
+_AKA Show me how Contentful works in the most foolproof way possible._
 
+ <hr>
 
-As a Support Engineer for [Contentful](https://www.contentful.com/), we frequently get asked these two questions by new users:
-- What is content modeling?
-- How does the content that is stored in Contentful get rendered on my website?
+Hello from the Customer Success team! :wave:
 
-To help us better understand the relationship between your [content model](√), the editor interface of our web app, and the output to your end product, I've created a template for a make-believe home goods business called Urbän Hømesteäd (when I came up with this name, I was just off of a vacation high from a winter trip to the Scandinavian countries...what can I say :grimacing:).
+As support engineers, we tackle hundreds of user questions a month such as: _How does Contentful work, what is content modeling, and how does content stored in Contentful get rendered on my web app?_ No two days are the same and it’s quite the exciting life. :sweat_smile:
 
-![website-example](images/website_example.png)
+So why is this blog post titled “A Day in the Life of a Customer Support Engineer”? Even though I just said “no two days are the same,” if my boss were to corner me and make me quantify what I spend most of my day doing (hypothetically, because she’s awesome and this would never happen IRL), I would have to answer: Drinking :coffee: (obviously) and helping new users get started with Contentful.
 
-<br>
+You see, once people understand what Contentful does, how it works, and how they can integrate it into their projects, they get into this magical, locked-in place with us where their sites are fast, their content is organized, and their build-to-ship process impressively quick. In short, our users are _really_ good at using Contentful.
 
-To make this project as easy as possible, we do not need to install packages or use the command line at all in order to view our sample web page. We will simply be using three files on your computer (`.html`, `.css`, and `.js`)--you can download the starter code here.
-
-Let's begin!
-
-:white_check_mark: _The JavaScript for this project is based on a previous showcase of our sample [Product Catalogue](https://github.com/contentful/product-catalogue-js). JSFiddle [here](https://jsfiddle.net/trodrigues/btvhh4ma/)._
-
-<br>
-<br>
-
-### Table of Contents
-
-- [Creating your Contentful space](#creating-your-contentful-space)
-- [Getting your space ID and access token](#getting-your-space-id-and-access-token)
-- [Making your website](#making-your-website)
-- [Adding new entries to your website](#adding-new-entries-to-your-website)
+However, for those of you who are just starting to kick around the idea of using Contentful as your content solution, there could be an initial courtship dance of figuring out how all of this works and what this is all about. Yes, we have very useful [getting started guides](https://www.contentful.com/developers/docs/tutorials/general/get-started/) and example apps (I highly recommend them!) but if you just want to see what Contentful does in the most foolproof way possible, well, step inside my office.
 
 <hr>
- <br>
+
+Let’s decouple Contentful from all of the cool modern web development technologies for a moment and don’t worry about picking your stack or installing packages yet. Our goal right now is to create a quick project so you can understand how Contentful works and deliver your first bit of content. Once you get a taste for what Contentful can do, it will be :rainbow: :rainbow: and beyond--trust me!
+
+One of my favorite this-is-how-Contentful-works links that I send to new users is a [JSFiddle](https://jsfiddle.net/contentful/kefaj4s8/) that shows the relationship between your content model, your content, and the output to your end product. Using the JSFiddle code as inspiration for our very first project together, I’ve created a template for a make-believe home goods business called Urbän Hømesteäd (when I came up with this name, I was coming off of a vacation high from a winter trip to the Scandinavian countries...what can I say :grimacing:).
+
+![product-catalogue](images/template.png)
+[See the example product catalogue [here](https://christineywang.github.io/product-catalogue/)].
+
+<br>
+<hr>
 
 ## Creating your Contentful space
-When you create a space in Contentful, you can create either an empty space (so you would be building your content model from scratch) or you can create a example space that has a content model (and even some entries) already built out.
 
-Example spaces are a great way for you to get started with our product and further explore content modeling and best practices. In this project, we will be creating an example space.
+Before we take a look at the project files, let’s create a new space in Contentful. When you create a space in Contentful, you can either create an empty space (so you would be building your content model from scratch) or you can create a example space that has a content model (and even some entries) already included. Example spaces are a great way for you to get started with Contentful so for this project, we will be creating an example space.
 
 From the web app, click on the hamburger menu on the upper left > _+ Add space_.
 
 In the _Create a new space_ popup, click on _Create an example space_.
 
-Select the **Product Catalogue** space > _Create space_:
+Select the **Product Catalogue** space > _Create space_ (don't forget to give your space a name):
 
-![create-example-space](images/create_space.png)
-
-<br>
-
-After a few seconds, you will have a new space with a predefined content model and a few sample entries. :metal:
+![create-space](images/create_space.png)
 
 <br>
 
-## Getting your space ID and access token
+After your space is prepared, click on _Get started_ and welcome to your new space! Take a look around and click into the different sections to see your content model, content, and media files. Your content model is where you will create different content types and each entry you create will use one of your content types as a template. Don't worry if this is still confusing to you--it will make sense once you see some content rendered on your webpage.
 
-In order to connect your website with Contentful, you will need to [install Contentful](https://github.com/contentful/contentful.js#installation) to your project or include our script tag in the `<head>` element of your `html` document.
-
-For this project, we have already included the script tag in the website code so you don't need to worry about this step.
-
-Contentful also requires users to provide credentials in order to access content in their spaces. You will need to find your space ID and your Delivery API access token.
-
-To get these credentials from the web app, go to _Space settings_ > _API keys_ > _Content delivery / preview tokens_.
-
-Expand the _Example space token 1_ section and you will see your Space ID and Content Delivery API access token.
+Now that your space is set up, let's connect Contentful to your web project files. We will be using starter code (for that make-believe online store :stuck_out_tongue_winking_eye:) and because we are taking the path of least resistance, you will not need to install any packages or run code in the command line in order to view your sample web page. All you need are these three files on your computer (download the start code here):
+`index.html`
+`contentful.css`
+`contentful.js`
 
 <br>
 
-## Making your website
+## Authenticating Your Website
 
-Open the `contentful.js` file in your text editor.
+To have Contentful "speak" with your website, we've already added our CDN in a `<script>` tag to the `<head>` element of your HMTL.
+Typically, we recommend that you connect to Contentful by [installing our SDK](https://github.com/contentful/contentful.js#installation) using a package manager such as `npm`. However, since we’ve said goodbye to packages and installs and all of those other extremely-helpful-but-not-for-right-now tools, a `<script>` tag is perfect for our use case.
 
-Replace the `accessToken` and `space` field values with your credentials:
+Next, open up `contentful.js` in a code editor so that you can authenticate your website to fetch content from Contentful. You will need to input your space ID and access token where you initialize the client in your JavaScript.
 
-![add-credentials](images/initialize.png)
+![authenticate](authenticate.png)
+
+To find your space ID and Delivery API access token from the we app, go to _Space settings_ > _API keys_ > _Content delivery / preview tokens_. Expand the _Example space token 1_ section and you will see your Space ID and Content Delivery API access token. Copy and paste these values over to your code and save your file.
 
 <br>
 
-Save your file.
+## Making your first Delivery API Call
 
+Open the `index.html` file in your browser and :boom:. Congrats--you've just delivered content using Contentful!
 
+![project](project.png)
 
-## Adding new entries to your website
+The four entries you see on your website are entries that have already been created in your example space.
 
-This is a sample product catalogue using Contentful to deliver content.
+## Taking a Closer Look at Your Code
 
-https://christineywang.github.io/product-catalogue/
+// open js file to look at how we are fetching the product content type. the rest of the content types are used for entries that will be referenced in the product type.
+
+//
