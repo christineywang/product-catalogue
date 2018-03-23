@@ -21,7 +21,8 @@ Let’s decouple Contentful from all of the cool modern web development technolo
 One of my favorite this-is-how-Contentful-works links that I send to new users is a [JSFiddle](https://jsfiddle.net/contentful/kefaj4s8/) that shows the relationship between your content model, your content, and the output to your end product. Using the JSFiddle code as inspiration for our very first project together, I’ve created a template for a make-believe home goods business called Urbän Hømesteäd (when I came up with this name, I was coming off of a vacation high from a winter trip to the Scandinavian countries...what can I say :grimacing:).
 
 ![product-catalogue](images/template.png)
-_See the example product catalogue [here](https://christineywang.github.io/product-catalogue/)]._
+
+_See my version of the example product catalogue [here](https://christineywang.github.io/product-catalogue/)]._
 
 <br>
 <hr>
@@ -30,7 +31,7 @@ _See the example product catalogue [here](https://christineywang.github.io/produ
 
 Before we take a look at the project files, let’s create a new space in Contentful. When you create a space in Contentful, you can either create an empty space (so you would be building your content model from scratch) or you can create a example space that has a content model (and even some entries) already included. Example spaces are a great way for you to get started with Contentful so for this project, we will be creating an example space.
 
-From the web app, click on the hamburger menu on the upper left > _+ Add space_.
+From the [web app](https://be.contentful.com/login), click on the hamburger menu on the upper left > _+ Add space_.
 
 In the _Create a new space_ popup, click on _Create an example space_.
 
@@ -58,20 +59,32 @@ Next, open up `contentful.js` in a code editor so that you can authenticate your
 
 ![authenticate](images/authenticate.png)
 
-To find your space ID and Delivery API access token from the we app, go to _Space settings_ > _API keys_ > _Content delivery / preview tokens_. Expand the _Example space token 1_ section and you will see your Space ID and Content Delivery API access token. Copy and paste these values over to your code and save your file.
+To find your Space ID and Delivery API access token from the we app, go to _Space settings_ > _API keys_ > _Content delivery / preview tokens_. Expand the _Example space token 1_ section and you will see your Space ID and Content Delivery API access token.
+
+Copy and paste these values over to your code and save your file.
 
 <br>
 
 ## Making your first Delivery API Call
 
-Open the `index.html` file in your browser and :boom:. Congrats--you've just delivered content using Contentful!
+Open the `index.html` file in your browser and :boom:.
+
+Congrats--you've just delivered content using Contentful!
 
 ![project](images/project.png)
 
-The four entries you see on your website are entries that have already been created in your example space.
+<br>
 
 ## Taking a Closer Look at Your Code
 
-// open js file to look at how we are fetching the product content type. the rest of the content types are used for entries that will be referenced in the product type.
+The four entries you see on your website are existing entries from when you created your example space. To see where these entries are coming from, go back to the web app and click into the _Content_ section. You will see a total of 9 entries but in our website, only 4 entries are rendered. The reason is because in our `contentful.js` file, we are only fetching entries that have the _Product_ content type, which we've queried for by using the content type ID `2PqfXUJwE8qSYKuM0U6w8M`:
 
-//
+![content-type](images/content-type.png)
+
+To simulate what your website code is doing, from the web app, apply a filter of _Content type = Product_ in the search pill and you will see the four entries that our website is fetching:
+
+![product-content-type](images/product-content-type.png)
+
+To understand which fields are getting rendered on your website, take a look at the JSON response of your API call. All of the object keys are properties that you can access by passing them into your code:
+
+![api-response](images/api-response.png)
