@@ -42,7 +42,7 @@ Select the **Product Catalogue** space > _Create space_ (don't forget to give yo
 
 <br>
 
-After your space is prepared, click on _Get started_ and welcome to your new space! Take a look around and click into the different sections to see your content model, content, and media files. Your content model is where you will create different content types and each entry you create will use one of your content types as a template. Don't worry if this is still confusing to you&mdash;it will make sense once you see some content rendered on your web page.
+After your space is prepared, click on _Get started_ and...welcome to your new space! Take a look around and click into the different sections to see your content model, content, and media files. Your content model is where you will create different content types and each entry you create will use one of your content types as a template. Don't worry if this is still confusing to you&mdash;it will make sense once you see some content rendered on your web page.
 
 Now that your space is set up, let's connect Contentful to our web project files. We will be using starter code (for our make-believe online store) and because we are taking the path of least resistance, you will not need to install any packages or run code in the command line in order to view your sample web page. All you need are these three files on your computer (download the starter code here):
 
@@ -54,7 +54,7 @@ Now that your space is set up, let's connect Contentful to our web project files
 
 ## Authenticating Your Web Project
 
-To enable Contentful to "speak" with your web project, we've already added our CDN in a `<script>` tag to the `<head>` element of your HMTL file. Typically, we recommend for you to connect to Contentful by [installing our SDK](https://github.com/contentful/contentful.js#installation) using a package manager such as `npm`. However, since we’ve said goodbye to packages and installs and all of those other extremely-helpful-but-not-for-right-now tools, a `<script>` tag is perfect for our use case.
+To enable Contentful to "speak" with your web project, we've already added our CDN in a `<script>` tag to the `<head>` element of your `.html` file. Typically, we recommend that you connect to Contentful by [installing our SDK](https://github.com/contentful/contentful.js#installation) using a package manager such as `npm`. However, since we’ve said goodbye to packages and installs and all of those other extremely-helpful-but-not-for-right-now tools, a `<script>` tag is perfect for our use case.
 
 Next, open up `contentful.js` in a code editor so you can authenticate your web project to fetch content from Contentful. You will need to input your space ID and access token where you initialize the client in your JavaScript:
 
@@ -86,13 +86,13 @@ The four entries you see on your web page are existing entries that were populat
 
 <br>
 
-To simulate what your web project code is doing from the web app, apply a filter of _Content type = Product_ in the search pill and you will see the four entries our web page is fetching:
+To simulate what your web project code is doing from the web app, apply a filter of _Content type = Product_ in the search pill and you will see the 4 entries our web page is fetching:
 
 ![product-content-type](images/product-content-type.png)
 
 <br>
 
-To understand which fields are getting rendered on your web page, take a look at the JSON response of your API call. All of the object keys are properties that you can access by passing them into your code:
+To understand which fields are getting rendered on your web page, take a look at the JSON response of your API call. All of the object keys are properties you can access by passing them into your code:
 
 ![api-response](images/api-response.png)
 
@@ -102,13 +102,13 @@ However, if we are just rendering one content type, why do we have three content
 
 Even though we are only fetching the _Product_ content type, we have access to the other content type entries because we have reference fields in the _Product_ content type.
 
-Here is one of your rendered entries on your web page:
+Take, for example, this rendered entry on your web page:
 
 ![product-expanded](images/product-expanded.png)
 
 <br>
 
-Right under the name of the product, we have the brand of the product (_Normann Copenhagen_) and we have the category of the product (_Home & Kitchen_). In our code, we are accessing this content when we pass in fields that reference other entries:
+Right under the name of the product, we have the brand of the product (_Normann Copenhagen_) and the category of the product (_Home & Kitchen_). In our code, we are accessing this content when we pass in fields that reference other entries:
 
 ![render-details](images/render-details.png)
 
@@ -128,10 +128,10 @@ This concept of content types and linking entries is the foundation for understa
 
 Now that you've seen the relationship between Contentful and your web project, it's time to have some fun!
 
-As you may have noticed in [my version](https://christineywang.github.io/product-catalogue/) of the product catalogue, I have a few more entries than what is included in the example space. So go ahead, create more entries from the web app and build out your sample page. Edit product names and swap in images that make more sense to you (you can add new assets by going to _Media_ > _Add asset_). As an additional exercise, edit the `contentful.js` file so you can utilize and render fields in your web page that you are not currently using (such as _Slug_ and _Tags_).
+As you may have noticed in [my version](https://christineywang.github.io/product-catalogue/) of the product catalogue, I have a few more entries than what is included in the example space. So go ahead, create more entries from the web app and build out your sample page. Edit product names and swap in images that make more sense to you (you can add new assets by going to _Media_ > _Add asset_). As an additional exercise, edit the `contentful.js` file so you can utilize and render fields in your web page you are not currently using (such as _Slug_ and _Tags_).
 
-Remember, what we just worked through was the most rudimentary way of showing you what Contentful can do for you. Contentful is meant to plug into frameworks such as [React](https://github.com/contentful/discovery-app-react), static site generators such as [Gatsby](https://www.gatsbyjs.org/packages/gatsby-source-contentful/), and pretty much any other project you can think of. And even though we are just using one of our APIs, we have [several more](https://www.contentful.com/developers/docs/references/) that support every stage of your development process (from staging to production).
+Remember, what we just worked through was the most rudimentary way of showing you what Contentful can do for you. Contentful is meant to plug into frameworks such as [React](https://github.com/contentful/discovery-app-react), static site generators such as [Gatsby](https://www.gatsbyjs.org/packages/gatsby-source-contentful/), and pretty much any other project you can think of. And even though we are using just one of our APIs, we have [several more](https://www.contentful.com/developers/docs/references/) that support every stage of your development process (from staging to production).
 
 <br>
 
-There you have it, a condensed look into a day in the life of a support engineer. But the best part of my day is now up to you. We love seeing all the cool things people build using Contentful and I learn so much from our users. So create something beautiful, do something amazing, and share it with the community; we are excited to see what you come up with.
+There you have it, a condensed look into a day in the life of a support engineer. But the best part of my day is now up to you. We love seeing all of the cool things people build using Contentful and we learn so much from our users. So create something beautiful, do something amazing, and share it with the community; we are excited to see what you come up with.
