@@ -21,7 +21,7 @@ Let’s decouple Contentful from all of the cool modern web development technolo
 One of my favorite this-is-how-Contentful-works links that I send to new users is a [JSFiddle](https://jsfiddle.net/contentful/kefaj4s8/) that shows the relationship between your content model, your content, and the output to your end product. Using the JSFiddle code as inspiration for our very first project together, I’ve created a template for a make-believe home goods business called Urbän Hømesteäd (when I came up with this name, I was coming off of a vacation high from a winter trip to the Scandinavian countries...what can I say :grimacing:).
 
 ![product-catalogue](images/template.png)
-[See the example product catalogue [here](https://christineywang.github.io/product-catalogue/)].
+_See the example product catalogue [here](https://christineywang.github.io/product-catalogue/)]._
 
 <br>
 <hr>
@@ -40,7 +40,7 @@ Select the **Product Catalogue** space > _Create space_ (don't forget to give yo
 
 <br>
 
-After your space is prepared, click on _Get started_ and welcome to your new space! Take a look around and click into the different sections to see your content model, content, and media files. Your content model is where you will create different content types and each entry you create will use one of your content types as a template. Don't worry if this is still confusing to you--it will make sense once you see some content rendered on your webpage.
+After your space is prepared, click on _Get started_ and welcome to your new space! Take a look around and click into the different sections to see your content model, content, and media files. Your content model is where you will create different content types and each entry you create will use one of your content types as a template. Don't worry if this is still confusing to you--it will make sense once you see some content rendered on your website.
 
 Now that your space is set up, let's connect Contentful to your web project files. We will be using starter code (for that make-believe online store :stuck_out_tongue_winking_eye:) and because we are taking the path of least resistance, you will not need to install any packages or run code in the command line in order to view your sample web page. All you need are these three files on your computer (download the start code here):
 `index.html`
@@ -56,7 +56,7 @@ Typically, we recommend that you connect to Contentful by [installing our SDK](h
 
 Next, open up `contentful.js` in a code editor so that you can authenticate your website to fetch content from Contentful. You will need to input your space ID and access token where you initialize the client in your JavaScript.
 
-![authenticate](authenticate.png)
+![authenticate](images/authenticate.png)
 
 To find your space ID and Delivery API access token from the we app, go to _Space settings_ > _API keys_ > _Content delivery / preview tokens_. Expand the _Example space token 1_ section and you will see your Space ID and Content Delivery API access token. Copy and paste these values over to your code and save your file.
 
@@ -66,7 +66,7 @@ To find your space ID and Delivery API access token from the we app, go to _Spac
 
 Open the `index.html` file in your browser and :boom:. Congrats--you've just delivered content using Contentful!
 
-![project](project.png)
+![project](images/project.png)
 
 The four entries you see on your website are entries that have already been created in your example space.
 
