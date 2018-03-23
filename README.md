@@ -54,7 +54,7 @@ Now that your space is set up, let's connect Contentful to our web project files
 
 ## Authenticating Your Web Project
 
-To enable Contentful to "speak" with your web project, we've already added our CDN in a `<script>` tag to the `<head>` element of your HMTL file. Typically, we recommend for you connect to Contentful by [installing our SDK](https://github.com/contentful/contentful.js#installation) using a package manager such as `npm`. However, since we’ve said goodbye to packages and installs and all of those other extremely-helpful-but-not-for-right-now tools, a `<script>` tag is perfect for our use case.
+To enable Contentful to "speak" with your web project, we've already added our CDN in a `<script>` tag to the `<head>` element of your HMTL file. Typically, we recommend for you to connect to Contentful by [installing our SDK](https://github.com/contentful/contentful.js#installation) using a package manager such as `npm`. However, since we’ve said goodbye to packages and installs and all of those other extremely-helpful-but-not-for-right-now tools, a `<script>` tag is perfect for our use case.
 
 Next, open up `contentful.js` in a code editor so you can authenticate your web project to fetch content from Contentful. You will need to input your space ID and access token where you initialize the client in your JavaScript:
 
