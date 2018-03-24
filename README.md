@@ -80,7 +80,7 @@ Congrats&mdash;you've just delivered content using Contentful!
 
 ## Taking a Closer Look at Your Code
 
-The four entries you see on your web page are existing entries that were populated when you created your example space. To see where these entries are coming from, go back to the web app and click into the _Content_ section. You will see a total of 9 entries but in our web page, only 4 entries are rendered. The reason is because in our `contentful.js` file, we are only fetching entries that have the _Product_ content type, which we've queried for by using the content type ID `2PqfXUJwE8qSYKuM0U6w8M`:
+The four entries you see on your web page are existing entries that were populated when you created your example space. To see where these entries are coming from, go back to the web app and click into the _Content_ section. You will see a total of nine entries but in our web page, only four entries are rendered. The reason is because in our `contentful.js` file, we are only fetching entries that have the _Product_ content type, which we've queried for by using the content type ID `2PqfXUJwE8qSYKuM0U6w8M`:
 
 ![content-type](images/content-type.png)
 
