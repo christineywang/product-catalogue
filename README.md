@@ -118,7 +118,7 @@ In a JSON response for our query, you can see that the `categories` field is a l
 
 ![reference-link](images/reference-link.png)
 
-You might be able to visualize this better if you add `${console.log(fields.categories)}` to your code. In the console, you will see the properties for which you are able to access from your linked reference entries.
+You might be able to visualize this better if you add `${console.log(fields.categories)}` to your code. In the console, you will see the properties for which you are able to access from your linked reference entries:
 
 ![reference-link2](images/categories.png)
 
