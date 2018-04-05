@@ -114,9 +114,13 @@ Right under the name of the product, we have the brand of the product (_Normann 
 
 <br>
 
-In the JSON response for our query, you can see that the `categories` field is a link entry that gives us access to another entry since we have the `sys.id` value of the other entry in the response:
+In a JSON response for our query, you can see that the `categories` field is a link entry that gives us access to another entry since we have the `sys.id` value of the other entry in the response:
 
 ![reference-link](images/reference-link.png)
+
+You might be able to understand this better if you add `${console.log(fields.categories)}` to your code. In the console, you will see the properties for which you are able to access from your linked reference entries.
+
+![reference-link2](images/categories.png)
 
 <br>
 
