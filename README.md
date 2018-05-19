@@ -1,3 +1,7 @@
+_This post has since been published [here](https://www.contentful.com/blog/2018/04/09/foolproof-guide-getting-started-contentful/)_.
+
+<br>
+
 # A Day in the Life of a Customer Support Engineer
 
 _AKA Show me how Contentful works in the most foolproof way possible._
