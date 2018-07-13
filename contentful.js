@@ -13,7 +13,8 @@ document.addEventListener('DOMContentLoaded', event => {
   const container = document.getElementById('content');
   contentfulClient
     .getEntries({
-      content_type: PRODUCT_CONTENT_TYPE_ID
+      content_type: PRODUCT_CONTENT_TYPE_ID,
+      order: '-sys.createdAt'
     })
     .then(entries => {
       container.innerHTML = renderProducts(entries.items);
