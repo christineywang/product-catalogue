@@ -7,7 +7,7 @@ const contentfulClient = contentful.createClient({
   space: SPACE_ID
 });
 
-const PRODUCT_CONTENT_TYPE_ID = '2PqfXUJwE8qSYKuM0U6w8M';
+const PRODUCT_CONTENT_TYPE_ID = 'product';
 
 document.addEventListener('DOMContentLoaded', event => {
   const container = document.getElementById('content');
